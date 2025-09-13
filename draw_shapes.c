@@ -26,3 +26,20 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+//Prints an arrow
+
+void print_arrow(int leftCol, int size){
+  print_triangle(leftCol, size);
+
+
+  // Compute proper offset to center the square tail
+  int triangleWidth = 2 * size + 1;
+
+  int squareWidth   = size;
+
+  int squareLeftCol = leftCol + (triangleWidth - squareWidth) / 2;
+
+  // Print the square tail
+  print_square(squareLeftCol, size);
+  
+}
